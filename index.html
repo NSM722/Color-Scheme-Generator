@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="index.css">
+
+	<title>Color Scheme Generator</title>
+</head>
+
+<body>
+	<main class="container">
+		<form id="color-form" name="color-form" class="color-form">
+			<input type="color" id="color" name="color" aria-label="color">
+			<select id="color-mode" name="color-mode" title="color-mode">
+				<option value="monochrome">Monochrome</option>
+				<option value="monochrome-dark">Monochrome-dark</option>
+				<option value="monochrome-light">Monochrome-light</option>
+				<option value="analogic">Analogic</option>
+				<option value="complement">Complement</option>
+				<option value="analogic-complement">Analogic-complement</option>
+				<option value="triad">Triad</option>
+				<option value="quad">Quad</option>
+			</select>
+			<button class="get-btn" type="submit">Get color scheme</button>
+		</form>
+		<div class="wrapper" id="wrapper">
+			<!-- Colors Container Rendered from API -->
+		</div>
+	</main>
+	<script src="index.js"></script>
+</body>
+
+</html>
