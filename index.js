@@ -19,6 +19,21 @@ function renderColorHTML() {
         `
   }
   document.getElementById('wrapper').innerHTML = colorHTML
+
+  /**
+   * Copying color hex value to clipboard and alerting the user
+   */
+  const hexValueElements = document.querySelectorAll(".hex-value");
+  hexValueElements.forEach(element => {
+    element.addEventListener("click", async function () {
+      try {
+        await navigator.clipboard.writeText(element.innerText);
+        alert("Text copied to clipboard: " + element.innerText);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
+      }
+    });
+  })
 }
 
 /**
@@ -48,7 +63,4 @@ colorForm.addEventListener('submit', function (event) {
   event.preventDefault()
   getColors(baseURL)
 })
-
-
-
 
