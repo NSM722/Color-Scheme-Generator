@@ -39,21 +39,24 @@ function renderColorHTML() {
 /**
  * Fetches the API data
  */
-function getColors(urlString) {
+async function getColors(urlString) {
   let colorValue = colorPicker.value.replace('#', '').trim()
   let colorModeValue = colorMode.value;
   try {
-    fetch(`${urlString}/scheme?hex=${colorValue}&mode=${colorModeValue}`)
-      .then(response => response.json())
-      .then(data => data.colors.forEach(item => {
+    const response = await fetch(`${urlString}/scheme?hex=${colorValue}&mode=${colorModeValue}`)
+    if (!response.ok) {
+      throw new Error('😖, something went wrong with your request - Please try again!')
+    } else {
+      const data = await response.json()
+      data.colors.forEach(item => {
         colors.push(item)
         renderColorHTML()
-      }))
-  } catch (error) {
-    console.log(error)
+      })
+    }
+  } catch (err) {
+    alert(err)
   }
   colors.length = 0
-
 }
 
 /**
