@@ -1,7 +1,7 @@
 /**
  * Interfaces
  */
-export interface Color {
+interface Color {
   hex: {
     value:string;
     clean:string;
@@ -84,3 +84,5 @@ export interface Color {
   };
   _embedded: {};
 }
+
+export default Color;

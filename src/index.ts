@@ -1,4 +1,4 @@
-import { Color } from './interface'
+import Color from './interface'
 
 const colorPicker = document.getElementById('color');
 const colorMode = document.getElementById('color-mode');
