@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: #434242;
+  width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 1em;
+  background: #FFFDFE;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  border-style: none;
+  height: 400px;
+  width: 100%;
+}
+
+.hex-value {
+  text-align: center;
+  font-weight: 900;
+}
+
+.hex-value:hover {
+  cursor: pointer;
+  color: #da4113;
+}
+
+.color-form {
+  display: flex;
+  gap: 0.5em;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 1em 0.5em 1.5em 0.5em;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+  height: 42px;
+}
+
+select {
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  padding: 0 0.8em;
+  width: 312px;
+}
+
+option {
+  font-size: 1rem;
+  line-height: 2.4;
+  color: #111827;
+}
+
+button {
+  background-color: #FFFDFE;
+  border: 1px solid #D1D5DB;
+  border-radius: 4px;
+  padding: 0 0.8em;
+  cursor: pointer;
+}
+
+.get-btn:hover,
+.get-btn:focus {
+  background: #2d033b;
+  color: antiquewhite;
+  transition: 500ms;
+  font-weight: 700;
+  text-transform: uppercase;
+}/*# sourceMappingURL=index.css.map */
