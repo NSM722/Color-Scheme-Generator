@@ -1,3 +1,6 @@
+@import './partials/colors';
+@import './partials/dimensions';
+
 *,
 *::after,
 *::before {
@@ -9,18 +12,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Nunito Sans', sans-serif;
-    color: #434242;
-    width: 100%;
-    min-height: 100%;
+    color: $text-darkGray;
+    width: $body-width;
+    min-height: $body-min-height;
 }
 
 .container {
-    width: 95%;
-    max-width: 600px;
+    width: $container-width;
+    max-width: $container-max-width;
     margin: 0 auto;
     padding-top: 1em;
-    background: #FFFDFE;
-
+    background: $bg-paleWhite;
 }
 
 .wrapper {
@@ -30,20 +32,21 @@ body {
 
 img {
     border-style: none;
-    height: 400px;
-    width: 100%;
+    height: $image-height;
+    width: $image-width;
 }
 
 
 .hex-value {
     text-align: center;
     font-weight: 900;
+
+    &:hover {
+        cursor: pointer;
+        color: $text-vividRed;
+    }
 }
 
-.hex-value:hover {
-    cursor: pointer;
-    color: rgb(218, 65, 19);
-}
 
 .color-form {
     display: flex;
@@ -57,25 +60,28 @@ input,
 select,
 button {
     font-family: inherit;
-    height: 42px;
+    height:$form-elements-height;
+}
+
+select,
+button {
+    border: 1px solid $border-lightGray;
 }
 
 select {
-    background-color: #FFFFFF;
-    border: 1px solid #D1D5DB;
+    background-color: $bg-white;
     padding: 0 .8em;
-    width: 312px;
+    width: $select-width;
 }
 
 option {
     font-size: 1rem;
     line-height: 2.4;
-    color: #111827;
+    color: $text-darkBlack;
 }
 
 button {
-    background-color: #FFFFFF;
-    border: 1px solid #D1D5DB;
+    background-color: $bg-paleWhite;
     border-radius: 4px;
     padding: 0 .8em;
     cursor: pointer;
@@ -83,8 +89,8 @@ button {
 
 .get-btn:hover,
 .get-btn:focus {
-    background: #2D033B;
-    color: antiquewhite;
+    background: $bg-darkMagenta;
+    color: $text-antiqueWhite;
     transition: 500ms;
     font-weight: 700;
     text-transform: uppercase;
