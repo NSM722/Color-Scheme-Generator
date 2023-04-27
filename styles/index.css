@@ -37,7 +37,6 @@ img {
   text-align: center;
   font-weight: 900;
 }
-
 .hex-value:hover {
   cursor: pointer;
   color: #da4113;
@@ -58,9 +57,13 @@ button {
   height: 42px;
 }
 
+select,
+button {
+  border: 1px solid #D1D5DB;
+}
+
 select {
   background-color: #FFFFFF;
-  border: 1px solid #D1D5DB;
   padding: 0 0.8em;
   width: 312px;
 }
@@ -73,7 +76,6 @@ option {
 
 button {
   background-color: #FFFDFE;
-  border: 1px solid #D1D5DB;
   border-radius: 4px;
   padding: 0 0.8em;
   cursor: pointer;
